@@ -12,4 +12,4 @@ def getwbmid():
     return json.dumps(a, ensure_ascii=False)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5001)
+    app.run(host='0.0.0.0',port=5001,debug=True)
