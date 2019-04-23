@@ -9,6 +9,7 @@ import aiohttp
 import random
 import io
 import sys
+from urltomid import *
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8')
 import useragent
 class Crawl_WB_Commenthtml:
@@ -16,17 +17,17 @@ class Crawl_WB_Commenthtml:
         self.cmnt_list = []
         self.headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6',
-        'Cookie': 'M_WEIBOCN_PARAMS=uicode%3D20000174;MLOGIN=1;SUB=_2A25xDKuyDeRhGeBL71YV-S_Nyj-IHXVSDjX6rDV6PUJbkdAKLU_HkW1NRxo1x1zfxa-o3f1kf1tQPWGVzFB0ubsz;SCF=ApFxuydWjqvsEzoQa-KGusT0Jr4U7FKep9qqzSbAZJwv_xb2EpC68-lqFAjM-3Fa7PyLaJzZ5G_D3SYafbyfuh4.;SUHB=0XDlMthwQ76fUm;SSOLoginState=1544084450;WEIBOCN_FROM=1110006030;_T_WM=2d85bdfb6030d1b3b748cdcbfa91aa1a'
+        'Cookie': 'M_WEIBOCN_PARAMS=uicode%3D20000174;SUB=_2A25xey4sDeRhGeBL71YU9ynKyjqIHXVSh7JkrDV6PUJbkdANLUPTkW1NRxrqa38ATTDrDDSkWkA5QE9_1GCT8-ip;MLOGIN=1;SCF=AsMQYFmjzrUPq0vWH9-kdzostEzXedQiGDAyNg2vbNoeepPKo8EBDbKY3Ig2fk8YXo1W-BLYkxzrHel8Y4QimHk.;SUHB=0IIVOLvSh6Svuh;SSOLoginState=1551851132;WEIBOCN_FROM=1110006030;_T_WM=6ca1ad1a9e8e681c1bb7a6e8e62705b0;XSRF-TOKEN=e4acfc'
     }
-        resp = requests.get(url, headers=self.headers).text
-        p1 = re.compile(r'rid=(.*?)&', re.S)
-        cut = re.findall(p1, resp)
-        self.mid = cut[0]
+        p1 = re.compile(r'.*/(.*?)[?]', re.S)
+        cut = re.findall(p1, url)
+        mid = url_to_mid(cut[0])
+        self.mid = mid
         self.url = 'https://weibo.com/aj/v6/comment/big?ajwvr=6&id={}&filter=all&page=1'.format(self.mid)
 
     async def get_comment(self,i):
         if len(self.cmnt_list) % 5000 == 0 and len(self.cmnt_list) != 0:
-            f = open('xinlang.txt', 'r')
+            f = open('/dkpt_pj/daokong1.01/Mediacmnt1.01/xinlang.txt', 'r')
             lines = f.readlines()  # 获取本地cookie列表
             self.headers = {
                 'User-Agent': random.choice(useragent.agents),

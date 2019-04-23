@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99cc1695-2c43-420a-927d-7150d350764b" name="Default Changelist" comment="" />
+    <list default="true" id="99cc1695-2c43-420a-927d-7150d350764b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../daokong1.01/getwbmid/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../daokong1.01/getwbmid/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../whdaokong1.01/daokong1.01/getwbmid/get_wbmid.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../whdaokong1.01/daokong1.01/getwbmid/get_wbmid.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,13 +75,31 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1040367380">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="12" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
+        <entry file="file://$PROJECT_DIR$/getwbmid_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="95">
               <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -91,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/get_wbmid.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -118,7 +139,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -136,8 +157,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="157" />
-    <option name="y" value="38" />
+    <option name="x" value="169" />
+    <option name="y" value="76" />
     <option name="width" value="1600" />
     <option name="height" value="945" />
   </component>
@@ -186,12 +207,12 @@
       <option name="application" value="" />
       <option name="flaskDebug" value="true" />
       <module name="getwbmid" />
-      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="target" value="$PROJECT_DIR$/getwbmid_app.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="F:\Flaskproject\getwbmid\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -214,10 +235,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="157" y="38" width="1600" height="945" extended-state="0" />
-    <editor active="true" />
+    <frame x="169" y="76" width="1600" height="945" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25974026" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26298702" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -249,18 +269,18 @@
   <component name="editorHistoryManager">
     <entry file="file://K:/flaskproject/Flask/Crawlmodule/Fh_Comment.py" />
     <entry file="file://K:/flaskproject/Capture/Capmodule/Cap_WY_Hot.py" />
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/xinlang.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getwbmid_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="95">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xinlang.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/useragent.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -272,7 +292,7 @@
     <entry file="file://$PROJECT_DIR$/get_wbmid.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

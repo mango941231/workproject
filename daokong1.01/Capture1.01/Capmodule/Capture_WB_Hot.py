@@ -22,15 +22,15 @@ class Cap_wbhotnews:
         driver.maximize_window()
         driver.get(self.url)
         time.sleep(5)
-        driver.save_screenshot('D:\\pythonflask\\jietupicture\\weibo\\weibo.png')
+        driver.save_screenshot('/dkpt_pj/jietupicture/weibo/weibo.png')
         element = driver.find_element_by_css_selector('#Pl_Official_WeiboDetail__73 > div > div > div > div.WB_feed_repeat.S_bg1.WB_feed_repeat_v3 > div > div.repeat_list')
         xPiont = element.location['x']
         yPiontup = element.location['y']
         element_width = xPiont + element.size['width']
         element_height = yPiontup + element.size['height']
-        picture = Image.open('D:\\pythonflask\\jietupicture\\weibo\\weibo.png')
+        picture = Image.open('/dkpt_pj/jietupicture/weibo/weibo.png')
         pic = picture.crop((xPiont - 10, yPiontup, element_width+10, element_height))
-        pic.save(r'D:\\pythonflask\\jietupicture\\weibo\\weibo.png')
+        pic.save(r'/dkpt_pj/jietupicture/weibo/weibo.png')
         """单条评论加上边框"""
         element = driver.find_element_by_css_selector(
             'div.repeat_list > div:nth-child(2) > div > div > div:nth-child({})'.format(
@@ -41,18 +41,19 @@ class Cap_wbhotnews:
         # element_height = yPiont + element.size['height']
         # elementup = driver.find_element_by_css_selector('div.repeat_list > div:nth-child(2)')
         # yPiontup = element.location['y']
-        image = 'D:\\pythonflask\\jietupicture\\weibo\\weibo.png'
+        image = '/dkpt_pj/jietupicture/weibo/weibo.png'
         img = cv2.imread(image)
         cv2.rectangle(img, (3, yPiont-yPiontup), (element_width, yPiont+element.size['height']-yPiontup), (0, 255, 0),
                       5)
         cv2.imwrite(image, img)
-        image = 'D:\\pythonflask\\jietupicture\\weibo\\weibo.png'  # 获取图片的二进制字符串
+        image = '/dkpt_pj/jietupicture/weibo/weibo.png'  # 获取图片的二进制字符串
+        driver.quit()
         with open(image, 'rb') as f:
             strb = base64.b64encode(f.read())
         place = int(self.hot_list.index(self.Id)) + 1
         datadict = {'type': '1', 'taskid': self.taskid, 'title': self.title, 'newtime': self.articletime,
                     'zannumber': self.agree, 'weizhi': str(place), 'url': str(strb, encoding="utf-8")}
-        apiurl = 'http://127.0.0.1:888/Port/getpic.php'
+        apiurl = 'http://dk.anming.pro/Port/getpic.php'
         requests.post(apiurl,data=datadict)
         print('已请求接口')
         return datadict

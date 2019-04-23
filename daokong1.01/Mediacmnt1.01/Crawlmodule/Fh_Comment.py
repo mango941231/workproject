@@ -31,10 +31,12 @@ class Fh_Comment:
         html = json.loads(commentjson)
         '''处理多种链接不同的情况 比如财经、娱乐等栏目和资讯链接不同'''
         if html['comments'] == []:
-            resp = requests.get(url).text
-            p2 = re.compile(r'"commentUrl":"(.*?)",', re.S)
-            cut = re.findall(p2, resp)
-            self.url = cut[0]
+            # resp = requests.get(url).text
+            # p2 = re.compile(r'"commentUrl":"(.*?)",', re.S)
+            # cut = re.findall(p2, resp)
+            p2 = re.compile(r'.*/(\S{11})', re.S)
+            cut = re.findall(p2, self.url)
+            self.url = 'ucms_' + cut[0]
             params = {
                 'callback': 'newCommentListCallBack',
                 'orderby': '',

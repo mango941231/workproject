@@ -1,0 +1,174 @@
+nohup: 忽略输入
+ * Serving Flask app "mediacmnt_app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 168-973-295
+10.0.8.1 - - [16/Apr/2019 10:08:56] "GET /?keyword=%E6%92%92%E6%97%A6%E6%B3%95&title=%E4%B8%80%E7%84%B6%E6%96%B0%E6%9D%90%E6%96%99&url=www.scyrxcl.com/ HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/dkpt_pj/daokong1.01/Mediacmnt1.01/mediacmnt_app.py", line 16, in abc
+    if 'sina' in url:
+TypeError: argument of type 'NoneType' is not iterable
+10.0.8.1 - - [16/Apr/2019 10:08:56] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.8.1 - - [16/Apr/2019 10:08:56] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.8.1 - - [16/Apr/2019 10:08:56] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.8.1 - - [16/Apr/2019 10:08:56] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.8.1 - - [16/Apr/2019 10:08:56] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.8.1 - - [16/Apr/2019 10:08:56] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.8.1 - - [17/Apr/2019 08:51:50] "GET /?pageurl=https://news.sina.com.cn/c/xl/2019-04-16/doc-ihvhiewr6456213.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [17/Apr/2019 08:51:51] "GET /favicon.ico HTTP/1.1" 404 -
+10.0.8.1 - - [17/Apr/2019 08:53:12] "GET /?pageurl=https://news.sina.com.cn/c/xl/2019-04-16/doc-ihvhiewr6456213.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 09:43:49] "GET /favicon.ico HTTP/1.1" 404 -
+10.0.8.1 - - [18/Apr/2019 14:02:41] "GET /?pageurl=http://sports.sina.com.cn/g/pl/2019-04-18/doc-ihvhiewr6795611.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 14:03:32] "GET /?pageurl=http://sports.sina.com.cn/g/pl/2019-04-18/doc-ihvhiewr6795611.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 14:07:19] "GET /?pageurl=https://finance.sina.com.cn/chanjing/gsnews/2019-04-18/doc-ihvhiqax3620036.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 14:12:58] "GET /?pageurl=https://news.sina.com.cn/w/2019-04-17/doc-ihvhiqax3534641.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 14:18:25] "GET /?pageurl=https://news.sina.com.cn/w/2019-04-17/doc-ihvhiqax3534641.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 14:19:48] "GET /?pageurl=https://news.sina.com.cn/w/2019-04-17/doc-ihvhiqax3534641.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 14:23:32] "GET /?pageurl=https://news.sina.com.cn/c/2019-04-18/doc-ihvhiewr6786664.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 14:26:59] "GET /?pageurl=https://news.sina.com.cn/c/2019-04-18/doc-ihvhiewr6786664.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 14:29:25] "GET /?pageurl=https://news.sina.com.cn/c/2019-04-18/doc-ihvhiewr6786664.shtml HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2019 15:58:24] "GET /?pageurl=https://news.sina.com.cn/c/2019-04-18/doc-ihvhiewr6786664.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 16:21:45] "GET /?pageurl=https://news.sina.com.cn/c/2019-04-18/doc-ihvhiewr6786664.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 16:42:11] "GET /?pageurl=https://news.sina.com.cn/c/2019-04-18/doc-ihvhiewr6786664.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 16:43:38] "GET /?pageurl=https://news.sina.com.cn/c/2019-04-18/doc-ihvhiewr6786664.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [18/Apr/2019 16:44:03] "GET /?pageurl=https://news.sina.com.cn/c/2019-04-18/doc-ihvhiewr6786664.shtml HTTP/1.0" 200 -
+127.0.0.1 - - [18/Apr/2019 16:58:18] "GET /?pageurl=https://news.sina.com.cn/c/2019-04-18/doc-ihvhiewr6786664.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [19/Apr/2019 09:58:17] "GET /favicon.ico HTTP/1.1" 404 -
+10.0.8.1 - - [22/Apr/2019 09:10:33] "GET /favicon.ico HTTP/1.1" 404 -
+10.0.8.1 - - [22/Apr/2019 12:41:16] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Apr/2019 14:03:11] "GET /?pageurl=https://mil.news.sina.com.cn/china/2019-04-22/doc-ihvhiewr7497630.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [22/Apr/2019 15:15:34] "GET /?pageurl=https://mil.news.sina.com.cn/china/2019-04-22/doc-ihvhiewr7497630.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [22/Apr/2019 15:15:34] "GET /favicon.ico HTTP/1.1" 404 -
+10.0.8.1 - - [22/Apr/2019 15:15:52] "GET /?pageurl=https://mil.news.sina.com.cn/china/2019-04-22/doc-ihvhiewr7497630.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [22/Apr/2019 15:20:28] "GET /?pageurl=https://news.sina.com.cn/w/2019-04-22/doc-ihvhiqax4323955.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [22/Apr/2019 15:23:57] "GET /?pageurl=https://news.163.com/19/0422/09/EDBUCPLN0001875O.html HTTP/1.1" 200 -
+10.0.8.1 - - [22/Apr/2019 15:24:51] "GET /?pageurl=https://news.163.com/19/0422/09/EDBUCPLN0001875O.html HTTP/1.1" 200 -
+10.0.8.1 - - [22/Apr/2019 15:26:03] "GET /?pageurl=https://news.163.com/19/0422/10/EDC3KOM200018AOR.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 11:11:26] "GET /?pageurl=https://news.163.com/19/0423/06/EDE729HM0001875O.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 11:14:11] "GET /?pageurl=https://news.163.com/19/0423/06/EDE729HM0001875O.html HTTP/1.1" 200 -
+ * Detected change in '/dkpt_pj/daokong1.01/Mediacmnt1.01/Crawlmodule/Wy_Comment.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 168-973-295
+10.0.8.1 - - [23/Apr/2019 11:34:09] "GET /?pageurl=https://news.163.com/19/0423/06/EDE729HM0001875O.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 11:34:57] "GET /?pageurl=https://news.163.com/19/0423/06/EDD7SA0F0001875P.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 11:35:21] "GET /?pageurl=https://news.163.com/19/0423/06/EDD7SA0F0001875P.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 11:39:47] "GET /?pageurl=https://news.163.com/19/0423/01/EDDLJKTC0001875N.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 11:40:31] "GET /?pageurl=https://news.163.com/19/0423/01/EDDLJKTC0001875N.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 11:41:09] "GET /?pageurl=https://news.163.com/19/0423/01/EDDLJKTC0001875N.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 13:56:32] "GET /?pageurl=https://news.163.com/19/0423/11/EDEO0OI80001875N.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 13:56:59] "GET /?pageurl=https://news.163.com/19/0423/11/EDEO0OI80001875N.html HTTP/1.1" 200 -
+ * Detected change in '/dkpt_pj/daokong1.01/Mediacmnt1.01/Crawlmodule/Wy_Comment.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 168-973-295
+10.0.8.1 - - [23/Apr/2019 14:01:35] "GET /?pageurl=https://news.163.com/19/0423/11/EDEO0OI80001875N.html HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/dkpt_pj/daokong1.01/Mediacmnt1.01/mediacmnt_app.py", line 23, in abc
+    a = Wy_Comment(url).main()
+  File "/dkpt_pj/daokong1.01/Mediacmnt1.01/Crawlmodule/Wy_Comment.py", line 116, in main
+    loop = asyncio.get_event_loop()
+  File "/usr/local/lib/python3.7/asyncio/events.py", line 644, in get_event_loop
+    % threading.current_thread().name)
+RuntimeError: There is no current event loop in thread 'Thread-2'.
+10.0.8.1 - - [23/Apr/2019 14:01:36] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:01:36] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:01:36] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:01:36] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:01:36] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:01:36] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/dkpt_pj/daokong1.01/Mediacmnt1.01/Crawlmodule/Wy_Comment.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 168-973-295
+10.0.8.1 - - [23/Apr/2019 14:06:31] "GET /?pageurl=https://news.163.com/19/0423/11/EDEO0OI80001875N.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:08:15] "GET /?pageurl=https://news.163.com/19/0423/11/EDEO0OI80001875N.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:08:21] "GET /?pageurl=https://news.163.com/19/0423/11/EDEO0OI80001875N.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:08:42] "GET /?pageurl=https://news.163.com/19/0423/11/EDEO0OI80001875N.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:09:03] "GET /?pageurl=https://news.163.com/19/0423/02/EDDQD7U90001875N.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:09:43] "GET /?pageurl=https://news.163.com/19/0423/11/EDENGHO20001899O.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:10:00] "GET /?pageurl=https://news.163.com/19/0423/11/EDENGHO20001899O.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:57:04] "GET /?pageurl=https://news.163.com/19/0423/11/EDENGHO20001899O.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 14:57:10] "GET /?pageurl=https://news.163.com/19/0423/11/EDENGHO20001899O.html HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:04:09] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:04:22] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+ * Detected change in '/dkpt_pj/daokong1.01/Mediacmnt1.01/Crawlmodule/Sina_Comment.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 168-973-295
+10.0.8.1 - - [23/Apr/2019 15:06:55] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:07:49] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:07:51] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:07:53] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:07:57] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:08:01] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:08:03] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:08:05] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:08:07] "GET /?pageurl=https://news.sina.com.cn/o/2019-04-22/doc-ihvhiewr7622470.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:18:25] "GET /?pageurl=https://tech.sina.com.cn/i/2019-04-22/doc-ihvhiqax4461276.shtml HTTP/1.1" 200 -
+Task exception was never retrieved
+future: <Task finished coro=<Sina_Comment.parse() done, defined at /dkpt_pj/daokong1.01/Mediacmnt1.01/Crawlmodule/Sina_Comment.py:34> exception=TypeError('expected string or bytes-like object')>
+Traceback (most recent call last):
+  File "/dkpt_pj/daokong1.01/Mediacmnt1.01/Crawlmodule/Sina_Comment.py", line 37, in parse
+    cutjson = re.findall(p2, response)
+  File "/usr/local/lib/python3.7/re.py", line 223, in findall
+    return _compile(pattern, flags).findall(string)
+TypeError: expected string or bytes-like object
+10.0.8.1 - - [23/Apr/2019 15:28:13] "GET /?pageurl=https://tech.sina.com.cn/i/2019-04-22/doc-ihvhiqax4461276.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 15:28:33] "GET /?pageurl=https://tech.sina.com.cn/i/2019-04-22/doc-ihvhiqax4461276.shtml HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 16:01:53] "GET /?pageurl=https://new.qq.com/omn/NBA2019042300413100 HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 16:02:09] "GET /?pageurl=https://new.qq.com/omn/NBA2019042300413100 HTTP/1.1" 200 -
+ * Detected change in '/dkpt_pj/daokong1.01/Mediacmnt1.01/Crawlmodule/Tx_Comment.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 168-973-295
+10.0.8.1 - - [23/Apr/2019 16:05:20] "GET /?pageurl=https://new.qq.com/omn/NBA2019042300413100 HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 16:05:32] "GET /?pageurl=https://new.qq.com/omn/NBA2019042300413100 HTTP/1.1" 200 -
+10.0.8.1 - - [23/Apr/2019 16:31:04] "GET /?pageurl=https://weibo.com/1990303727/HqACN3ebJ?ref=feedsdk HTTP/1.0" 200 -
+10.0.8.1 - - [23/Apr/2019 16:47:38] "GET /?pageurl=https://mil.news.sina.com.cn/china/2019-04-23/doc-ihvhiqax4538405.shtml HTTP/1.0" 200 -
+10.0.8.1 - - [23/Apr/2019 17:29:19] "GET /?pageurl=https://weibo.com/5173736345/Hqo6Pp5CM?type=comment HTTP/1.1" 200 -

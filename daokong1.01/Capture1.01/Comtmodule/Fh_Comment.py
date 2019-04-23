@@ -38,10 +38,9 @@ class Fh_Comment:
         html = json.loads(commentjson)
         '''处理多种链接不同的情况 比如财经、娱乐等栏目和资讯链接不同'''
         if html['comments'] == []:
-            resp = requests.get(url).text
-            p2 = re.compile(r'"commentUrl":"(.*?)",', re.S)
-            cut = re.findall(p2, resp)
-            self.docurl = cut[0]
+            p2 = re.compile(r'.*/(\S{11})', re.S)
+            cut = re.findall(p2, self.url)
+            self.docurl = 'ucms_' + cut[0]
     def get_hot(self):
         parms = {
             'callback': 'hotCommentListCallBack',
@@ -73,16 +72,20 @@ class Fh_Comment:
     def main(self):
         self.get_hot()
         resp = requests.get(url=self.url).text
-        p4 = re.compile(r'<title>(.*?)_.*?</title>', re.S)
-        docname = re.findall(p4, resp)
-        p3 = re.compile(r'"commentUrl":"(.*?)",', re.S)
-        docurl = re.findall(p3, resp)
-        if docurl == []:
-            p3 = re.compile(r'"commentUrl": "(.*?)",', re.S)
-            docurl = re.findall(p3, resp)
+        p4 = re.compile(r'<title>(.*?)</title>', re.S)
+        docnamelist = re.findall(p4, resp)
+        docname = docnamelist[0]
+        p3 = re.compile(r'.*/(.*)', re.S)
+        docurllist = re.findall(p3, self.url)
+        docurl = 'ucms_' + docurllist[0]
+        if '_' in docname:
+            p4 = re.compile(r'<title>(.*?)_.*?</title>', re.S)
+            docnamelist = re.findall(p4, resp)
+            docname = docnamelist[0]
+            docurl = self.url
         nextparams = {
-            'docUrl':docurl[0],
-            'docName':docname[0],
+            'docUrl':docurl,
+            'docName':docname,
             'skey': '38eaaf',
             'pcUrl':self.url
         }

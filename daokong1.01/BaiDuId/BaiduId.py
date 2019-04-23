@@ -13,12 +13,11 @@ class BaiduId:
         self.id = ''
     def get_id(self):
         try:
-            for i in range(0, 20, 10):
+            for i in range(0, 200, 10):
                 url = f'https://www.baidu.com/s?wd={self.keywords}&pn={i}'
                 response = requests.get(url, headers=self.headers).text
                 html = pq(response)
                 items = html('#content_left .result.c-container ').items()
-                print(i)
                 for item in items:
                     htmlurl = item.find('div.f13 > a.c-showurl').text()
                     if '...' in htmlurl:

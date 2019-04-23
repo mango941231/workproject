@@ -4,6 +4,7 @@ import json
 import asyncio
 import aiohttp
 import requests
+import uvloop
 
 class Sina_Comment:
     def __init__(self,url):
@@ -78,8 +79,9 @@ class Sina_Comment:
                 return pages
     def main(self):
         htmlpages = self.get_pages()
-        asyncio.set_event_loop(asyncio.new_event_loop())
-        loop = asyncio.get_event_loop()
+        asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+        loop = uvloop.new_event_loop()
+        asyncio.set_event_loop(loop)
         tasks = [self.parse(i,self.url) for i in range(1, int(htmlpages/20)+2)]
         loop.run_until_complete(asyncio.wait(tasks))
         loop.close()

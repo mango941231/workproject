@@ -4,6 +4,7 @@ import json
 import time
 import requests
 from urllib import parse
+from collections import OrderedDict
 from Capmodule.Cap_WY_Hot import Cap_wyhotnews as wy
 
 class Wy_Comment:
@@ -61,22 +62,20 @@ class Wy_Comment:
             comments = html['comments']
             for hotid in hot_comments:
                 htmlid = comments[hotid]
-                commentId = str(htmlid['commentId'])
-                if self.Id == commentId:
+                commentId = htmlid['commentId']
+                if self.Id == str(commentId):
                     self.agree = htmlid['vote']
                 # Content = htmlid['content']
-                self.hot_list.append(commentId)
+                self.hot_list.append(str(commentId))
         # for i in reversed(range(len(self.hot_list))):
         #     if self.hot_list[i].get('Content') == '跟贴被火星网友带走啦~':
         #         self.hot_list.pop(i)
     def get_info(self):
-        resp = requests.get(self.url).text
-        p2 = re.compile(r'<title>(.*?)_', re.S)
-        cuttitle = re.findall(p2, resp)
-        self.title = cuttitle[0]   #文章标题
-        p3 = re.compile(r'published_time" content="(.*?)"', re.S)
-        cuttime = re.findall(p3, resp)
-        self.articletime = cuttime[0]
+        url = 'http://comment.api.163.com/api/v1/products/a2869674571f77b5a0867c3d71db5856/threads/{0}'.format(self.cuturl[0])
+        resp = requests.get(url).text
+        respjson = json.loads(resp)
+        self.title = respjson['title']
+        self.articletime = respjson['createTime']
     def main(self):
         self.get_hot()
         self.get_info()

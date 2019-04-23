@@ -3,6 +3,7 @@ import re
 import json
 import time
 import requests
+from urltomid import *
 from pyquery import PyQuery as pq
 from Capmodule.Capture_WB_Hot import Cap_wbhotnews as cw
 
@@ -18,12 +19,12 @@ class Wb_Comment:
         self.agree = ''
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36',
-            'Cookie': 'M_WEIBOCN_PARAMS=uicode%3D20000174;MLOGIN=1;SUB=_2A252-zFfDeRhGeBK4lAX8i7LzjuIHXVSBF8XrDV6PUJbkdANLU7ikW1NRx7V61MobIwfOf6j2OC4-fKJYW8DCEy-;SCF=Ak419-qJJKRPEN_WvFSQFOXJu9s1zrQ5LAMMZx7N2hdcNMuC2KOTb8GkaQnLAt84Rn9UgBW88qdC__4JkqSIhZI.;SUHB=0S7CImebougT2s;SSOLoginState=1543454991;WEIBOCN_FROM=1110006030;_T_WM=20cd9b394e948f272b8c0e90aaaab33e'
+            'Cookie': 'M_WEIBOCN_PARAMS=uicode%3D20000174;SUB=_2A25xey4sDeRhGeBL71YU9ynKyjqIHXVSh7JkrDV6PUJbkdANLUPTkW1NRxrqa38ATTDrDDSkWkA5QE9_1GCT8-ip;MLOGIN=1;SCF=AsMQYFmjzrUPq0vWH9-kdzostEzXedQiGDAyNg2vbNoeepPKo8EBDbKY3Ig2fk8YXo1W-BLYkxzrHel8Y4QimHk.;SUHB=0IIVOLvSh6Svuh;SSOLoginState=1551851132;WEIBOCN_FROM=1110006030;_T_WM=6ca1ad1a9e8e681c1bb7a6e8e62705b0;XSRF-TOKEN=e4acfc'
         }
-        resp = requests.get(url, headers=self.headers).text
-        p1 = re.compile(r'rid=(.*?)&', re.S)
-        cut = re.findall(p1, resp)
-        self.mid = cut[0]
+        p1 = re.compile(r'.*/(.*?)[?]', re.S)
+        cut = re.findall(p1, url)
+        mid = url_to_mid(cut[0])
+        self.mid = mid
         # self.pageurl = 'https://weibo.com/aj/v6/comment/big?ajwvr=6&id={}&filter=all&page=1'.format(self.mid)
         self.pageurl = 'https://weibo.com/aj/v6/comment/big?id={}&from=singleWeiBo&__rnd=1545206992544'.format(self.mid)
     def get_frist(self):

@@ -4,6 +4,7 @@ import re
 import json
 import asyncio
 import aiohttp
+import uvloop
 from urllib import parse
 from collections import OrderedDict
 
@@ -107,9 +108,15 @@ class Wy_Comment:
 
     def main(self):
         self.get_hot()
-        asyncio.set_event_loop(asyncio.new_event_loop())
-        loop = asyncio.get_event_loop()
-        tasks = [self.getnews(i*30) for i in range(55)]
+        url = f'http://comment.api.163.com/api/v1/products/a2869674571f77b5a0867c3d71db5856/threads/{self.cuturl[0]}/comments/newList?limit=30&offset=0'
+        respjson = requests.get(url).json()
+        page = int(respjson['newListSize'] / 30) + 1
+        asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+        loop = uvloop.new_event_loop()
+        asyncio.set_event_loop(loop)
+        # asyncio.set_event_loop(asyncio.new_event_loop())
+        # loop = asyncio.get_event_loop()
+        tasks = [self.getnews(i*30) for i in range(page)]
         loop.run_until_complete(asyncio.wait(tasks))
         loop.close()
         b = OrderedDict()

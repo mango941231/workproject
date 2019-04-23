@@ -1,0 +1,33 @@
+nohup: 忽略输入
+ * Serving Flask app "baiduid_app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 168-973-295
+ * Detected change in '/dkpt_pj/daokong1.01/BaiDuId/BaiduId.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 168-973-295
+10.0.8.1 - - [16/Apr/2019 10:08:39] "GET /?keyword=%E6%92%92%E6%97%A6%E6%B3%95&title=%E4%B8%80%E7%84%B6%E6%96%B0%E6%9D%90%E6%96%99&url=www.scyrxcl.com/ HTTP/1.1" 200 -
+10.0.8.1 - - [16/Apr/2019 10:08:44] "GET /?keyword=%E6%92%92%E6%97%A6%E6%B3%95&title=%E4%B8%80%E7%84%B6%E6%96%B0%E6%9D%90%E6%96%99&url=www.scyrxcl.com/ HTTP/1.1" 200 -
+10.0.8.1 - - [16/Apr/2019 10:09:08] "GET /?keyword=%E6%92%92%E6%97%A6%E6%B3%95&title=%E4%B8%80%E7%84%B6%E6%96%B0%E6%9D%90%E6%96%99&url=www.scyrxcl.com/ HTTP/1.1" 200 -
+10.0.8.1 - - [16/Apr/2019 10:09:08] "GET /favicon.ico HTTP/1.1" 404 -
+ * Detected change in '/dkpt_pj/daokong1.01/BaiDuId/BaiduId.py', reloading
+页面链接www.scyrxcl.com/   页面标题一然新材料
+tools_18016972267973302438位于第11页
+页面链接www.scyrxcl.com/   页面标题一然新材料
+tools_18016972267973302438位于第11页
+页面链接www.scyrxcl.com/   页面标题一然新材料
+tools_18016972267973302438位于第11页
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 168-973-295
+127.0.0.1 - - [22/Apr/2019 10:42:57] "GET /?keyword=&title=&url= HTTP/1.0" 200 -
+127.0.0.1 - - [22/Apr/2019 10:44:28] "GET /?keyword=&title=&url= HTTP/1.0" 200 -
+127.0.0.1 - - [22/Apr/2019 10:58:30] "GET /?keyword=%E6%B5%8B%E8%AF%95&title=%E6%B5%8B%E8%AF%95&url=http%3A%2F%2Fwww.slxun.com%2Ftopic-86838-1.html HTTP/1.0" 200 -
+127.0.0.1 - - [23/Apr/2019 17:25:40] "GET /?keyword=%E5%93%88%E5%93%88%E5%93%88&title=%E5%93%88%E5%93%88%E5%93%88&url=https%3A%2F%2Fwww.baidu.com%2F HTTP/1.0" 200 -
+127.0.0.1 - - [23/Apr/2019 17:27:41] "GET /?keyword=%E5%93%88%E5%93%88%E5%93%88&title=%E5%93%88%E5%93%88%E5%93%88&url=https%3A%2F%2Fwww.baidu.com%2F HTTP/1.0" 200 -

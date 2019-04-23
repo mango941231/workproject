@@ -5,6 +5,7 @@ import json
 import time
 import asyncio
 import aiohttp
+import uvloop
 from urllib import parse
 class Tx_Comment:
     def __init__(self, url):
@@ -153,8 +154,9 @@ class Tx_Comment:
 
     def main(self):
         self.get_hot()
-        asyncio.set_event_loop(asyncio.new_event_loop())
-        loop = asyncio.get_event_loop()
+        asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+        loop = uvloop.new_event_loop()
+        asyncio.set_event_loop(loop)
         loop.run_until_complete(self.getnews())
         loop.close()
         # tx_commment_dict = {'最新评论': len(self.new_list), '最热评论': len(self.hot_list)}
